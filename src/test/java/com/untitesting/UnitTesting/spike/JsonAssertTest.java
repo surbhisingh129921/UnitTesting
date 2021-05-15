@@ -21,7 +21,7 @@ public class JsonAssertTest {
 
     @Test
     public void jsonAssertSpecialCharacter() throws Exception{
-        String expectedResponse = "{\"quantity\":100,\"name\":\"pen\",\"price\":10,\"id\":1}";
+        String expectedResponse = "{quantity:100,name:pen,price:10,id:1}";
         JSONAssert.assertEquals(actualResponse,expectedResponse,false);
     }
 }
