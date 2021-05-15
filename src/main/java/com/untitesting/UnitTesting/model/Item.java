@@ -1,11 +1,27 @@
 package com.untitesting.UnitTesting.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Transient;
+
+@Entity
 public class Item {
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
+    }
 
     private  int quantity;
     private  String name;
     private  int price;
+    @Id
     private  int id;
+
+    @Transient
+    private int value;
 
     public int getQuantity() {
         return quantity;
